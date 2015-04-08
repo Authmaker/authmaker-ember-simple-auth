@@ -1,5 +1,5 @@
 {
-  "name": "ember-simple-auth-oauth2-implicit",
+  "name": "authmaker-ember-simple-auth",
   "dependencies": {
     "jquery": "^1.11.1",
     "ember": "1.10.0",

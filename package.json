@@ -1,7 +1,7 @@
 {
-  "name": "ember-simple-auth-oauth2-implicit",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "authmaker-ember-simple-auth",
+  "version": "1.0.0",
+  "description": "Ember Simple Auth authenticator and authorizer for AuthMaker",
   "directories": {
     "doc": "doc",
     "test": "tests"

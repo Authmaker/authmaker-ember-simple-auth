@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-simple-auth-oauth2-implicit'
+  name: 'authmaker-ember-simple-auth'
 };

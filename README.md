@@ -1,4 +1,4 @@
-# Ember-simple-auth-oauth2-implicit
+# authmaker-ember-simple-auth
 
 This README outlines the details of collaborating on this Ember addon.
 
