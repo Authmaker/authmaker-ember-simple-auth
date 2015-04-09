@@ -11,6 +11,7 @@ export default authenticatorBase.extend({
       }
     });
   },
+  
   authenticate: function(options) {
     if (window.location.hash) {
       return new Ember.RSVP.Promise((resolve) => {
@@ -19,8 +20,6 @@ export default authenticatorBase.extend({
           oauthUrl: options.domainUrl //save so we know where to invalidate token later
         });
       });
-
-      // transision.send("authenticate");
     } else {
       window.location = "%@/signin?response_type=token&client_id=%@&redirect_uri=%@".fmt(
         options.domainUrl,
