@@ -11,7 +11,7 @@ export default authenticatorBase.extend({
       }
     });
   },
-  
+
   authenticate: function(options) {
     if (window.location.hash) {
       return new Ember.RSVP.Promise((resolve) => {
@@ -21,14 +21,16 @@ export default authenticatorBase.extend({
         });
       });
     } else {
-      window.location = "%@/signin?response_type=token&client_id=%@&redirect_uri=%@".fmt(
-        options.domainUrl,
-        options.clientId,
-        encodeURIComponent(options.redirectUri));
+
+      return new Ember.RSVP.Promise(function(){
+        window.location = "%@/signin?response_type=token&client_id=%@&redirect_uri=%@".fmt(
+          options.domainUrl,
+          options.clientId,
+          encodeURIComponent(options.redirectUri));
+      });
     }
   },
   invalidate: function(data) {
-    console.log('invalidating', data);
     return new Ember.RSVP.Promise(function(resolve) {
       Ember.$.ajax({
         url: "%@/token?access_token=%@".fmt(data.oauthUrl, data.access_token),
