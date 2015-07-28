@@ -1,25 +1,29 @@
 # authmaker-ember-simple-auth
 
-This README outlines the details of collaborating on this Ember addon.
+## Installation - quick start
 
-## Installation
+Install Ember Simple Auth:
+```
+ember install ember-cli-simple-auth
+```
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Install this package:
+```
+ember install authmaker-ember-simple-auth
+```
 
-## Running
+Add simple auth config to your environment:
+```
+"simple-auth": {
+  authorizer: 'authmaker-ember-simple-auth:authorizer'
+},
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Add Authmaker config to your environment:
+```
+authMaker: {
+  domainUrl = "http://localhost:5000",
+  redirectUri = "http://localhost:4200/login",
+  clientId = "some client Id"
+},
+```
