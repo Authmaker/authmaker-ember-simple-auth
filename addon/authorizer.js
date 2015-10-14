@@ -1,4 +1,4 @@
-import authorizerBase from 'simple-auth/authorizers/base';
+import authorizerBase from 'ember-simple-auth/authorizers/base';
 import Ember from 'ember';
 
 export default authorizerBase.extend({

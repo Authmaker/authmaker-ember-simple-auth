@@ -1,7 +1,7 @@
-import authenticatorBase from 'simple-auth/authenticators/base';
+import Base from 'ember-simple-auth/authenticators/base';
 import Ember from 'ember';
 
-export default authenticatorBase.extend({
+export default Base.extend({
   restore: function(data) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       if (!Ember.isEmpty(data.access_token)) {
