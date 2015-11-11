@@ -23,10 +23,11 @@ export default authenticatorBase.extend({
     } else {
 
       return new Ember.RSVP.Promise(function(){
-        window.location = "%@/signin?response_type=token&client_id=%@&redirect_uri=%@".fmt(
+        window.location = "%@/signin?response_type=token&client_id=%@&redirect_uri=%@&previous_location=%@".fmt(
           options.domainUrl,
           options.clientId,
-          encodeURIComponent(options.redirectUri));
+          encodeURIComponent(options.redirectUri),
+          encodeURIComponent(window.location));
       });
     }
   },
