@@ -1,5 +1,5 @@
 
-2.4.0 / 2015-11-11
+1.2.0 / 2015-11-11
 ==================
 
   * Merge pull request #2 from Authmaker/feature/previousLocation
