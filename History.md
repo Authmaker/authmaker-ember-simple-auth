@@ -1,4 +1,10 @@
 
+2.1.0 / 2015-12-17
+==================
+
+  * Merge pull request #4 from Authmaker/feature/login-route
+  * creating login-route mixin and updating the Readme
+
 2.0.0 / 2015-12-09
 ==================
 
