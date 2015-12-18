@@ -32,7 +32,7 @@ export default Ember.Route.extend(AuthmakerLoginRoute, {
 });
 ```
 
-## Usage
+## Authmaker Simple Auth Specific Usage
 
 Add `application-route-mixin` to your application route:
 
@@ -44,8 +44,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 });
 ```
 
-Now your application will automatically handle the action `{{action "invalidateSession"}}` when you need to logout
-
 To allow your user to login you can use the Ember Simple Auth's `session.authenticate()` as follows:
 
 ```
@@ -56,6 +54,32 @@ export default Ember.Controller.extend({
   actions: {
     login() {
       return this.get('session').authenticate('authenticator:authmaker', Config.authMaker);
+    }
+  }
+});
+```
+
+Authmaker automatically provides an application authorizer which you can use as follows:
+```
+import ApplicationAdapter from './application';
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
+
+export default ApplicationAdapter.extend(DataAdapterMixin, {
+  authorizer: 'authorizer:application',
+});
+```
+
+### General Simple Auth Usage
+If you want to be able to logout using an action such as this `{{action "logout"}}` you just need to call
+
+```
+import Ember from 'ember';
+import Config from 'your-app/config/environment';
+
+export default Ember.Controller.extend({
+  actions: {
+    logout() {
+      this.get('session').invalidate();
     }
   }
 });
