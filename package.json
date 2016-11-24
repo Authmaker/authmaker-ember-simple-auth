@@ -1,6 +1,6 @@
 {
   "name": "authmaker-ember-simple-auth",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Ember Simple Auth authenticator and authorizer for AuthMaker",
   "directories": {
     "doc": "doc",
