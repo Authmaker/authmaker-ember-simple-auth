@@ -14,7 +14,7 @@ ember install authmaker-ember-simple-auth
 
 Add Authmaker config to your environment:
 ```
-authMaker: {
+authmaker: {
   domainUrl = "http://localhost:5000",
   redirectUri = "http://localhost:4200/login",
   clientId = "some client Id"
@@ -28,7 +28,7 @@ import AuthmakerLoginRoute from 'authmaker-ember-simple-auth/mixins/login-route'
 import Config from 'your-app/config/environment';
 
 export default Ember.Route.extend(AuthmakerLoginRoute, {
-  config: Config //this is very important, do not forget to add this
+  config: Config.authmaker //this is very important, do not forget to add this
 });
 ```
 
@@ -53,7 +53,7 @@ import Config from 'your-app/config/environment';
 export default Ember.Controller.extend({
   actions: {
     login() {
-      return this.get('session').authenticate('authenticator:authmaker', Config.authMaker);
+      return this.get('session').authenticate('authenticator:authmaker', Config.authmaker);
     }
   }
 });
