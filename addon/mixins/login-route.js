@@ -12,10 +12,11 @@ export default Ember.Mixin.create({
     if (this.get('session.isAuthenticated')) {
       this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
     } else {
-      this.get('session').authenticate('authenticator:authmaker', this.get('config'));
-      Ember.run.next(() => {
+      this.get('session').authenticate('authenticator:authmaker', this.get('config')).then(function() {
         Ember.run.next(() => {
-          this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
+          Ember.run.next(() => {
+            this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
+          });
         });
       });
     }
