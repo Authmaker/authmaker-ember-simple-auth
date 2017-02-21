@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/Blooie/authmaker-ember-simple-auth",
+  "repository": "https://github.com/Authmaker/authmaker-ember-simple-auth",
   "engines": {
     "node": ">= 0.10.0"
   },
