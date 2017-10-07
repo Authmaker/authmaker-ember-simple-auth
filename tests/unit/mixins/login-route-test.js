@@ -1,12 +1,12 @@
 import Ember from 'ember';
-import LoginRouteMixin from '../../../mixins/login-route';
+import LoginRouteMixin from 'authmaker-ember-simple-auth/mixins/login-route';
 import { module, test } from 'qunit';
 
-module('LoginRouteMixin');
+module('Unit | Mixin | login route');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  var LoginRouteObject = Ember.Object.extend(LoginRouteMixin);
-  var subject = LoginRouteObject.create();
+  let LoginRouteObject = Ember.Object.extend(LoginRouteMixin);
+  let subject = LoginRouteObject.create();
   assert.ok(subject);
 });

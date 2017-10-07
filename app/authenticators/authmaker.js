@@ -1,3 +1,3 @@
-import Authmaker from 'authmaker-ember-simple-auth/authenticator';
+import AuthmakerAuthenticator from 'authmaker-ember-simple-auth/authenticator';
 
-export default Authmaker.extend();
+export default AuthmakerAuthenticator.extend();

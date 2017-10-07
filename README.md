@@ -50,7 +50,10 @@ To allow your user to login you can use the Ember Simple Auth's `session.authent
 import Ember from 'ember';
 import Config from 'your-app/config/environment';
 
+const { inject: { service } } = Ember;
+
 export default Ember.Controller.extend({
+  session: service(),
   actions: {
     login() {
       return this.get('session').authenticate('authenticator:authmaker', Config.authmaker);
