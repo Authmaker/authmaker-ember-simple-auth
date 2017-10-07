@@ -1,6 +1,6 @@
 {
   "name": "authmaker-ember-simple-auth",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "Ember Simple Auth authenticator and authorizer for Authmaker",
   "keywords": [
     "ember-addon",
