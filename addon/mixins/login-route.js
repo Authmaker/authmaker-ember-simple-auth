@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import { next } from '@ember/runloop';
+import Mixin from '@ember/object/mixin';
+import { inject as service } from '@ember/service';
 
-const { inject: { service } } = Ember;
-
-export default Ember.Mixin.create({
+export default Mixin.create({
   session: service(),
   beforeModel: function(transition) {
     var urlDomEle;
@@ -15,8 +15,8 @@ export default Ember.Mixin.create({
       this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
     } else {
       this.get('session').authenticate('authenticator:authmaker', this.get('config')).then(() => {
-        Ember.run.next(() => {
-          Ember.run.next(() => {
+        next(() => {
+          next(() => {
             this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
           });
         });
