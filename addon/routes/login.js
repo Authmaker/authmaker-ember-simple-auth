@@ -1,20 +1,23 @@
-import { next } from '@ember/runloop';
-import Mixin from '@ember/object/mixin';
+import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+import { next } from '@ember/runloop';
 
-export default Mixin.create({
+export default Route.extend({
   session: service(),
-  beforeModel: function(transition) {
+  beforeModel: function() {
     var urlDomEle;
-    if (transition.queryParams.previous_location) {
+
+    var urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has('previous_location')) {
       urlDomEle = document.createElement('a');
-      urlDomEle.href = transition.queryParams.previous_location;
+      urlDomEle.href = urlParams.get('previous_location');
     }
 
     if (this.get('session.isAuthenticated')) {
       this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
     } else {
-      this.get('session').authenticate('authenticator:authmaker', this.get('config')).then(() => {
+      this.get('session').authenticate('authenticator:authmaker').then(() => {
         next(() => {
           next(() => {
             this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');

@@ -2,6 +2,9 @@ import $ from 'jquery';
 import { isEmpty } from '@ember/utils';
 import { Promise as EmberPromise } from 'rsvp';
 import Base from 'ember-simple-auth/authenticators/base';
+import config from 'ember-get-config';
+
+const { authmaker } = config;
 
 export default Base.extend({
   restore: function(data) {
@@ -14,18 +17,18 @@ export default Base.extend({
     });
   },
 
-  authenticate: function(options) {
+  authenticate: function() {
     if (window.location.hash) {
       return new EmberPromise((resolve) => {
         resolve({
           access_token: window.location.hash.replace('#', ''),
-          oauthUrl: options.domainUrl //save so we know where to invalidate token later
+          oauthUrl: authmaker.domainUrl //save so we know where to invalidate token later
         });
       });
     } else {
 
       return new EmberPromise(function(){
-        window.location = `${options.domainUrl}/signin?response_type=token&client_id=${options.clientId}&redirect_uri=${encodeURIComponent(options.redirectUri)}&previous_location=${encodeURIComponent(window.location)}`;
+        window.location = `${authmaker.domainUrl}/signin?response_type=token&client_id=${authmaker.clientId}&redirect_uri=${encodeURIComponent(authmaker.redirectUri)}&previous_location=${encodeURIComponent(window.location)}`;
       });
     }
   },
