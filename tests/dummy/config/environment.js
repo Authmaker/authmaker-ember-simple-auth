@@ -24,11 +24,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.authmaker = {
+      domainUrl: 'REPLACE_ME',
+      redirectUri: 'REPLACE_ME',
+      clientId: 'REPLACE_ME'
+    };
   }
 
   if (environment === 'test') {
@@ -44,7 +44,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.authmaker = {
+      domainUrl: 'REPLACE_ME',
+      redirectUri: 'REPLACE_ME',
+      clientId: 'REPLACE_ME'
+    };
   }
 
   return ENV;
