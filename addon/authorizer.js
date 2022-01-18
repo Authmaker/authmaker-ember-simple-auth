@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { isEmpty } from '@ember/utils';
 import authorizerBase from 'ember-simple-auth/authorizers/base';
 

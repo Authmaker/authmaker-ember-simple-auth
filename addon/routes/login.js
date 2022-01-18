@@ -1,4 +1,4 @@
-/* eslint-disable ember/no-get */
+/* eslint-disable ember/no-classic-classes, prettier/prettier, ember/no-get */
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import { next } from '@ember/runloop';

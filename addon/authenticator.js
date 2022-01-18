@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { isEmpty } from '@ember/utils';
 import { Promise as EmberPromise } from 'rsvp';
 import Base from 'ember-simple-auth/authenticators/base';
