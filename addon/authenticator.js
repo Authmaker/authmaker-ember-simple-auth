@@ -1,8 +1,9 @@
-import $ from 'jquery';
 import { isEmpty } from '@ember/utils';
 import { Promise as EmberPromise } from 'rsvp';
 import Base from 'ember-simple-auth/authenticators/base';
 import config from 'ember-get-config';
+import window from 'ember-window-mock';
+import fetch from 'fetch';
 
 const { authmaker } = config;
 
@@ -32,15 +33,16 @@ export default Base.extend({
       });
     }
   },
-  invalidate: function(data) {
-    return new EmberPromise(function(resolve) {
-      $.ajax({
-        url: `${data.oauthUrl}/token?access_token=${data.access_token}`,
-        type: 'DELETE',
-        crossDomain: true
-      }).always(function() {
-        resolve();
+  invalidate: async function(data) {
+    try {
+      await fetch(`${data.oauthUrl}/token?access_token=${data.access_token}`, {
+        credentials: "include",
+        method: 'DELETE',
       });
-    });
+    } catch (err) {
+      //ignore this error
+    }
+
+    return this._super();
   }
 });

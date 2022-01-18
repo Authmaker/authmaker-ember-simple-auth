@@ -1,0 +1,7 @@
+<h2 id="title">Welcome to Authmaker Ember Simple Auth</h2>
+
+{{#if session.isAuthenticated}}
+  <button {{action "invalidateSession"}} data-test-logout-button>Logout</button>
+{{else}}
+  {{#link-to "login" data-test-login-button=true}}Click here to <b>Login Now!!</b>{{/link-to}}
+{{/if}}

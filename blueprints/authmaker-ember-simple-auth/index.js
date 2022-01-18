@@ -14,6 +14,18 @@ module.exports = {
     // no-op
   },
 
+  fileMapTokens: function() {
+    let isAddon = this.project.isEmberCLIAddon();
+    return {
+      __base__() {
+        if(isAddon) {
+          return join('tests', 'dummy');
+        }
+        return '';
+      }
+    }
+  },
+
   afterInstall: function(options) {
     updateRouter.call(this, 'add', options);
 
@@ -44,7 +56,7 @@ function updateRouter(action, options) {
 function findRouter(options) {
   let routerPathParts = [options.project.root];
 
-  if (options.dummy && options.project.isEmberCLIAddon()) {
+  if (options.project.isEmberCLIAddon()) {
     routerPathParts = routerPathParts.concat(['tests', 'dummy', 'app', 'router.js']);
   } else {
     routerPathParts = routerPathParts.concat(['app', 'router.js']);

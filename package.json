@@ -28,9 +28,11 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "ember-cli-babel": "^7.7.3",
+    "ember-fetch": "^8.1.1",
     "ember-get-config": "^0.2.4",
     "ember-router-generator": "^2.0.0",
     "ember-simple-auth": "^3.0.0",
+    "ember-window-mock": "^0.3.0",
     "recast": "^0.19.0"
   },
   "devDependencies": {
@@ -53,6 +55,7 @@
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.10.0",
     "ember-source-channel-url": "^1.1.0",
+    "ember-test-selectors": "^5.0.0",
     "ember-try": "^1.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-ember": "^6.2.0",

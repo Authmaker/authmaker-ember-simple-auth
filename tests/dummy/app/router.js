@@ -7,6 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+
+  this.route('fake-oauth', function() {
+    this.route('signin');
+  });
 });
 
 export default Router;
