@@ -1,0 +1,18 @@
+<h1>Fake External Login Page</h1>
+
+<em>pretend this is on https://yourawesomeapp.com/login</em>
+
+<br>
+<label for="username">Username:</label>
+<input type="text" disabled name="username" value="">
+
+<br>
+<label for="password">Password</label>
+<input type="text" disabled name="password" value="">
+
+<br>
+<button type="button" name="button" {{action "login"}} data-test-login-button>Login</button>
+
+<p>turns out you don't even need a password! It's a fake login anyway</p>
+
+{{outlet}}

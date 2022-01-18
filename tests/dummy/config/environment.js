@@ -20,15 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    authmaker: {
+      // this is to get tests working
+      domainUrl: 'http://localhost:4200/fake-oauth',
+      redirectUri: 'REDIRECT_URI',
+      clientId: 'CLIENT_ID'
     }
   };
 
   if (environment === 'development') {
-    ENV.authmaker = {
-      domainUrl: 'REPLACE_ME',
-      redirectUri: 'REPLACE_ME',
-      clientId: 'REPLACE_ME'
-    };
+    //
   }
 
   if (environment === 'test') {
