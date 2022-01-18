@@ -14,9 +14,7 @@ Compatibility
 Installation
 ------------------------------------------------------------------------------
 
-Install this addon.
-
-```bash
+```
 ember install authmaker-ember-simple-auth
 ```
 
