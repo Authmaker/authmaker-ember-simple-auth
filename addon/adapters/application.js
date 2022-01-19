@@ -1,3 +1,4 @@
+/* eslint-disable ember/use-ember-data-rfc-395-imports, ember/no-mixins */
 import DS from 'ember-data';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
