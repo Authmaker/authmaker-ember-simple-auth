@@ -1,3 +1,9 @@
+v4.0.0 / 2022-01-22
+==================
+* Update Ember to 3.20 #33 from @mansona
+* Add tests #31 from @mansona
+* Breaking: drop support for Node &lt; 12 and move from Travis to Github CI #32 from @mansona
+
 v3.1.0 / 2020-05-01
 ==================
 
