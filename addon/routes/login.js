@@ -5,6 +5,7 @@ import { next } from '@ember/runloop';
 
 export default Route.extend({
   session: service(),
+  router: service(),
   beforeModel: function() {
     var urlDomEle;
 
@@ -21,7 +22,7 @@ export default Route.extend({
       this.get('session').authenticate('authenticator:authmaker').then(() => {
         next(() => {
           next(() => {
-            this.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
+            this.router.transitionTo(urlDomEle ? urlDomEle.pathname : '/');
           });
         });
       });
