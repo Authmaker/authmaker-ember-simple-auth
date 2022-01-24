@@ -1,8 +1,10 @@
 {{! template-lint-disable no-link-to-positional-params require-button-type no-action no-curly-component-invocation no-implicit-this }}
 <h2 id="title">Welcome to Authmaker Ember Simple Auth</h2>
 
-{{#if session.isAuthenticated}}
+{{#if this.session.isAuthenticated}}
   <button {{action "invalidateSession"}} data-test-logout-button>Logout</button>
 {{else}}
-  {{#link-to "login" data-test-login-button=true}}Click here to <b>Login Now!!</b>{{/link-to}}
+  <LinkTo @route="login" data-test-login-button>
+    Click here to <b>Login Now!!</b>
+  </LinkTo>
 {{/if}}
