@@ -32,14 +32,14 @@
     "ember-compatibility-tests": "ember try:each"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^5.0.0",
     "ember-cli-babel": "^7.26.10",
     "ember-fetch": "^8.1.1",
-    "ember-get-config": "^0.2.4",
+    "ember-get-config": "^1.0.2",
     "ember-router-generator": "^2.0.0",
-    "ember-simple-auth": "^3.0.0",
-    "ember-window-mock": "^0.3.0",
-    "recast": "^0.19.0"
+    "ember-simple-auth": "^4.1.1",
+    "ember-window-mock": "^0.7.2",
+    "recast": "^0.20.5"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -68,7 +68,7 @@
     "ember-source": "~3.28.8",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^3.15.0",
-    "ember-test-selectors": "^5.0.0",
+    "ember-test-selectors": "^6.0.0",
     "ember-try": "^1.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
