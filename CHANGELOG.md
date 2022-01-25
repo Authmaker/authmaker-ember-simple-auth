@@ -1,3 +1,8 @@
+v5.0.0 / 2022-01-25
+==================
+* Fix deprecations and support Ember 4.0 #35 from @mansona
+* Breaking: drop support for Ember &lt; 3.16 and update with ember-cli-update #34 from @mansona
+
 v4.0.0 / 2022-01-22
 ==================
 * Update Ember to 3.20 #33 from @mansona
