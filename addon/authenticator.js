@@ -30,7 +30,7 @@ export default Base.extend({
     } else {
 
       return new EmberPromise(function(){
-        window.location = `${authmaker.domainUrl}/signin?response_type=token&client_id=${authmaker.clientId}&redirect_uri=${encodeURIComponent(authmaker.redirectUri)}&previous_location=${encodeURIComponent(window.location)}`;
+        window.location.href = `${authmaker.domainUrl}/signin?response_type=token&client_id=${authmaker.clientId}&redirect_uri=${encodeURIComponent(authmaker.redirectUri)}&previous_location=${encodeURIComponent(window.location)}`;
       });
     }
   },

@@ -3,9 +3,11 @@ import { module, test } from 'qunit';
 import { visit, currentURL, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import { default as window } from 'ember-window-mock';
+import { setupWindowMock } from 'ember-window-mock/test-support';
 
 module('Acceptance | login', function(hooks) {
   setupApplicationTest(hooks);
+  setupWindowMock(hooks);
 
   test('clicking login redirects to the right place', async function(assert) {
     await visit('/');

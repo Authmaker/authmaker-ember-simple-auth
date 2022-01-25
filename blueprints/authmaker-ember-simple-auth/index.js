@@ -2,7 +2,6 @@
 'use strict';
 
 const recast = require('recast');
-const chalk = require('chalk');
 const { readFileSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
@@ -41,17 +40,9 @@ module.exports = {
 function updateRouter(action, options) {
   let routeName = 'login';
 
-  let actionColorMap = {
-    add: 'green',
-    remove: 'red',
-  };
-  let color = actionColorMap[action] || 'gray';
-
   writeRoute(action, routeName, options);
 
   this.ui.writeLine('updating router');
-  this._writeStatusToUI(chalk[color], action + ' route', routeName);
-
 }
 
 function findRouter(options) {
