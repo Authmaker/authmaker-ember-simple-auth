@@ -1,18 +1,15 @@
-authmaker-ember-simple-auth
-==============================================================================
+# authmaker-ember-simple-auth
 
 This addon allows you to get started very quickly with [Authmaker](https://authmaker.com) and [ember-simple-auth](https://github.com/simplabs/ember-simple-auth). This Readme has some basic information about how to use the addon but if you want a more in-depth description on how to use it you can check the [Authmaker Guides](https://beginner-guides.authmaker.com/release/)
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v3.12 or above
 * Ember CLI v3.12 or above
-* Node.js v12 or above
+* Node.js v18 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install authmaker-ember-simple-auth
@@ -25,8 +22,7 @@ documentation](https://beginner-guides.authmaker.com/release/implement-login/con
 for more information.
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 When you install this addon it will automatically generate a login route for
 you, along with a few other useful files. If you are starting an Ember app from
@@ -68,13 +64,11 @@ with this in place you can make use of these actions in the template as follows:
 {{/if}}
 ```
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
