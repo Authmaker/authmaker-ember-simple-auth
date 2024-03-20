@@ -1,3 +1,5 @@
+# Changelog
+
 v5.0.0 / 2022-01-25
 ==================
 * Fix deprecations and support Ember 4.0 #35 from @mansona
