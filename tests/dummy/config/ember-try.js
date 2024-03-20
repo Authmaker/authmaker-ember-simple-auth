@@ -13,6 +13,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.16.0',
+            'ember-data': '~3.16.0',
           },
         },
       },
@@ -21,6 +22,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.20.5',
+            'ember-data': '~3.20.0',
           },
         },
       },
@@ -29,6 +31,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.24.0',
+            'ember-data': '~3.24.0',
           },
         },
       },
@@ -37,6 +40,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~3.28.0',
+            'ember-data': '~3.28.0',
           },
         },
       },
@@ -45,6 +49,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.4.0',
+            'ember-data': '~4.4.0',
           },
         },
       },
@@ -53,6 +58,7 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.8.0',
+            'ember-data': '~4.8.0',
           },
         },
       },
@@ -61,6 +67,16 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': '~4.12.0',
+            'ember-data': '~4.12.0',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-5.4',
+        npm: {
+          devDependencies: {
+            'ember-source': '~5.4.0',
+            'ember-data': '~5.3.0',
           },
         },
       },
