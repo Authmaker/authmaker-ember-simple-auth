@@ -6,7 +6,7 @@ This addon allows you to get started very quickly with [Authmaker](https://authm
 
 * Ember.js v3.12 or above
 * Ember CLI v3.12 or above
-* Node.js v12 or above
+* Node.js v18 or above
 
 
 ## Installation
