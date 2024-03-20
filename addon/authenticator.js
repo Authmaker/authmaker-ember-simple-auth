@@ -4,7 +4,6 @@ import { Promise as EmberPromise } from 'rsvp';
 import Base from 'ember-simple-auth/authenticators/base';
 import config from 'ember-get-config';
 import window from 'ember-window-mock';
-import fetch from 'fetch';
 
 const { authmaker } = config;
 
