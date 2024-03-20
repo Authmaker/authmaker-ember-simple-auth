@@ -14,6 +14,8 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.16.0',
             'ember-data': '~3.16.0',
+            'ember-cli': '^4.12.0',
+            '@ember/test-helpers': '^2.0.0',
           },
         },
       },
@@ -23,6 +25,8 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.20.5',
             'ember-data': '~3.20.0',
+            'ember-cli': '^4.12.0',
+            '@ember/test-helpers': '^2.0.0',
           },
         },
       },
@@ -32,6 +36,8 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.24.0',
             'ember-data': '~3.24.0',
+            'ember-cli': '^4.12.0',
+            '@ember/test-helpers': '^2.0.0',
           },
         },
       },
@@ -41,6 +47,7 @@ module.exports = async function () {
           devDependencies: {
             'ember-source': '~3.28.0',
             'ember-data': '~3.28.0',
+            'ember-cli': '^4.12.0',
           },
         },
       },
