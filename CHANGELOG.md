@@ -1,5 +1,24 @@
 # Changelog
 
+## Release (2024-03-20)
+
+authmaker-ember-simple-auth 6.0.0 (major)
+
+#### :boom: Breaking Change
+* `authmaker-ember-simple-auth`
+  * [#47](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/47) update ember-simple-auth, move to pnpm, and drop support for Node < 18 ([@mansona](https://github.com/mansona))
+
+#### :rocket: Enhancement
+* `authmaker-ember-simple-auth`
+  * [#50](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/50) Update to 5.7 with ember-cli-update ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* `authmaker-ember-simple-auth`
+  * [#48](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/48) start using release-plan ([@mansona](https://github.com/mansona))
+
+#### Committers: 1
+- Chris Manson ([@mansona](https://github.com/mansona))
+
 v5.0.0 / 2022-01-25
 ==================
 * Fix deprecations and support Ember 4.0 #35 from @mansona
