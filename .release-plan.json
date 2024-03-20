@@ -1,0 +1,25 @@
+{
+  "solution": {
+    "authmaker-ember-simple-auth": {
+      "impact": "major",
+      "oldVersion": "5.0.0",
+      "newVersion": "6.0.0",
+      "constraints": [
+        {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2024-03-20)\n\nauthmaker-ember-simple-auth 6.0.0 (major)\n\n#### :boom: Breaking Change\n* `authmaker-ember-simple-auth`\n  * [#47](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/47) update ember-simple-auth, move to pnpm, and drop support for Node < 18 ([@mansona](https://github.com/mansona))\n\n#### :rocket: Enhancement\n* `authmaker-ember-simple-auth`\n  * [#50](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/50) Update to 5.7 with ember-cli-update ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* `authmaker-ember-simple-auth`\n  * [#48](https://github.com/Authmaker/authmaker-ember-simple-auth/pull/48) start using release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
