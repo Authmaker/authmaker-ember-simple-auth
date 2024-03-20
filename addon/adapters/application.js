@@ -1,7 +1,24 @@
-/* eslint-disable ember/no-classic-classes, prettier/prettier, ember/use-ember-data-rfc-395-imports, ember/no-mixins */
-import DS from 'ember-data';
-import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
+import { inject as service } from '@ember/service';
 
-export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
-  authorizer: 'authorizer:application'
-});
+export default class ApplicationAdapter extends JSONAPIAdapter {
+  @service session;
+
+  handleResponse(status) {
+    if (status === 401 && this.session.isAuthenticated) {
+      this.session.invalidate();
+    }
+    return super.handleResponse(...arguments);
+  }
+
+  get headers() {
+    let headers = {};
+    if (this.session.isAuthenticated) {
+      headers[
+        'Authorization'
+      ] = `Bearer ${this.session.data.authenticated.access_token}`;
+    }
+
+    return headers;
+  }
+}
